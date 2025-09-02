@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "podcast_generator"
+version = "5.0.0"
+authors = [
+    { name="AI Assistant", email="assistant@example.com" },
+]
+description = "A TUI-based podcast generator with multiple AI personas."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "textual",
+    "aiohttp",
+]
+
+[project.scripts]
+podcast-generator = "podcast_generator_v5:main"
+
+[tool.setuptools]
+py-modules = ["podcast_generator_v5", "podcast_engine", "tts_generator"]
